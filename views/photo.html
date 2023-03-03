@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>photo</title>
+    <title>Photo</title>
+    <link rel="stylesheet" href="/styles/photo.css">
 </head>
+
 <body>
-    <div class="img-container"></div>
-    <div class="meta-container">
-        <div class="resolution"></div>
-        <div class="make"></div>
-        <div class="model"></div>
-        <div class="focal-length"></div>
-        <div class="shutterspeed"></div>
-        <div class="fnumber"></div>
-        <div class="iso"></div>
-        <div class="exposure"></div>
-        <div class="flash"></div>
-    </div>
+
+    <div class="status">Loading...</div>
+
+    <a href="/" class="back">
+        <h1>←</h1>
+    </a>
+
+    <main>
+        <div class="img-container"></div>
+        <div class="meta-container">
+            <div class="name">
+                <div class="make"></div>
+                <div class="model"></div>
+            </div>
+
+            <div style="display: flex; font-size: large; margin-bottom: 8px;">
+                <div class="focal-length"></div>
+                <div class="fnumber"></div>
+                <div class="shutterspeed"></div>
+            </div>
+
+            <div style="display: flex; font-size: large; margin-bottom: 8px;">
+                <div class="iso"></div>
+                <div class="exposure"></div>
+            </div>
+
+            <div class="resolution"></div>
+            <div class="flash"></div>
+        </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="/scripts/photo.js" type="module"></script>
 </body>
+
 </html>

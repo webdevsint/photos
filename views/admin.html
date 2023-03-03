@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+
+<body>
+
+    <div class="status">Loading...</div>
+
+    <h2>Upload a new photo</h2>
+
+    <div class="upload-container">
+
+        <form action='/upload' method='post' encType="multipart/form-data">
+            <input type="file" name="photo" accept="image/jpeg" />
+
+            <h4 style="margin: 6px;">Enter authorization token.</h4>
+
+            <input name="password" type="password" placeholder="...." />
+            <button type="submit" style="margin-left: 6px;">Upload</button>
+        </form>
+    </div>
+
+    <h2>My photos</h2>
+
+    <div class="posts"></div>
+
+    <div class="modal-container">
+        <h1 onclick='document.querySelector(".modal-container").style.display = "none";'>←</h1>
+        <div class="modal">
+            <div class="post-id" style="display: none;"></div>
+            <h4>Enter authorization token.</h4>
+            <input type="password" class="modal-input">
+            <button onclick="deleteHandler()">Delete</button>
+        </div>
+    </div>
+
+    <script src="/scripts/admin.js" type="module"></script>
+    <script>
+        function deleteHandler() {
+            const id = document.querySelector(".post-id").innerText;
+
+            fetch(`http://localhost:7000/delete?id=${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ password: document.querySelector('.modal-input').value }),
+            })
+                .then(res => {
+                    if (res.status !== 200) {
+                        res.json()
+                            .then(data => {
+                                document.querySelector(".post-id").innerText = ''
+                                document.querySelector('.modal-input').value = ''
+                                alert(data.message)
+                                document.querySelector(".modal-container").style.display = "none";
+                            })
+
+                    } else {
+                        alert('Photo was deleted!')
+                        location.reload()
+                    }
+                })
+
+        }
+    </script>
+</body>
+
+</html>

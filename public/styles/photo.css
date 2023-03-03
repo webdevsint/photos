@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  border: 2px solid #000000;
+  width: 40%;
+  margin: 2rem;
+  display: none;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  border-bottom: 2px solid black;
+}
+
+a {
+  color: #4c83db;
+}
+
+.meta-container {
+  padding: 1rem;
+}
+
+.name {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.make,
+.model {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.make {
+  font-weight: bold;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.fnumber,
+.exposure {
+  margin: 0 10px;
+}
+
+.resolution,
+.flash {
+  font-size: large;
+  margin-bottom: 6px;
+}
+
+.back {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    width: 70%;
+  }
+
+  .name {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    width: 95%;
+  }
+}
