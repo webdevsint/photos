@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 body {
@@ -61,14 +66,6 @@ a {
 .flash {
   font-size: large;
   margin-bottom: 6px;
-}
-
-.back {
-  color: black;
-  text-decoration: none;
-  position: absolute;
-  top: 10px;
-  left: 20px;
 }
 
 @media screen and (max-width: 1000px) {

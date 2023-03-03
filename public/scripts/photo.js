@@ -55,10 +55,8 @@ function getExif() {
       document.querySelector(".exposure").innerHTML =
         "EXP " + MetaData.ExposureBias;
     }
+
+    document.querySelector(".status").style.display = "none";
+    document.querySelector("main").style.display = "block";
   });
 }
-
-setTimeout(() => {
-  document.querySelector(".status").style.display = "none";
-  document.querySelector("main").style.display = "block";
-}, 250);

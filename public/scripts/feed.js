@@ -4,7 +4,7 @@ photos.forEach((photo) => {
   const a = document.createElement("a");
   const img = document.createElement("img");
 
-  a.href = `http://localhost:7000/photo/${photo.id}`;
+  a.href = `/photo/${photo.id}`;
 
   img.src = photo.path;
 
@@ -13,6 +13,4 @@ photos.forEach((photo) => {
   document.querySelector(".img-container").appendChild(a);
 });
 
-setTimeout(() => {
-  document.querySelector(".status").style.display = "none";
-}, 200);
+document.querySelector(".status").style.display = "none";

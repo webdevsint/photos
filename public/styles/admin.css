@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 h2 {
@@ -78,6 +83,11 @@ input[type="file"]::file-selector-button {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .posts div button {
@@ -146,7 +156,6 @@ input[type="file"]::file-selector-button {
   color: white;
   font-weight: bold;
 }
-
 
 @media screen and (max-width: 1070px) {
   .posts {

@@ -23,7 +23,5 @@ function showModal(id) {
   document.querySelector(".modal-container").style.display = "flex";
 }
 
-setTimeout(() => {
-  document.querySelector(".status").style.display = "none";
-  document.querySelector(".posts").style.display = "grid";
-}, 200);
+document.querySelector(".status").style.display = "none";
+document.querySelector(".posts").style.display = "grid";
