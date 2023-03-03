@@ -1,6 +1,6 @@
 import photos from "../data.json" assert { type: "json" };
 
-photos.forEach((photo) => {
+photos.map((photo) => {
   const a = document.createElement("a");
   const img = document.createElement("img");
 

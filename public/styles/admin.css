@@ -161,11 +161,19 @@ input[type="file"]::file-selector-button {
   .posts {
     grid-template-columns: repeat(auto-fit, 400px);
   }
+
+  .posts div {
+    min-width: 400px;
+  }
 }
 
 @media screen and (max-width: 860px) {
   .posts {
     grid-template-columns: repeat(auto-fit, 440px);
+  }
+
+  .posts div {
+    min-width: 440px;
   }
 }
 
@@ -173,11 +181,19 @@ input[type="file"]::file-selector-button {
   .posts {
     grid-template-columns: repeat(auto-fit, 330px);
   }
+
+  .posts div {
+    min-width: 330px;
+  }
 }
 
 @media screen and (max-width: 380px) {
   .posts {
     grid-template-columns: repeat(auto-fit, 250px);
+  }
+
+  .posts div {
+    min-width: 250px;
   }
 }
 

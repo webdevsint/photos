@@ -38,6 +38,7 @@
   width: fit-content;
   flex-direction: column;
   flex-wrap: wrap;
+  min-width: 380px;
 }
 
 .img-container a img {
@@ -63,11 +64,18 @@
   .img-container {
     grid-template-columns: repeat(auto-fit, 400px);
   }
+
+  .img-container a {
+    min-width: 400px;
+  }
 }
 
 @media screen and (max-width: 860px) {
   .img-container {
     grid-template-columns: repeat(auto-fit, 440px);
+  }
+  .img-container a {
+    min-width: 440px;
   }
 }
 
@@ -75,11 +83,17 @@
   .img-container {
     grid-template-columns: repeat(auto-fit, 420px);
   }
+  .img-container a {
+    min-width: 420px;
+  }
 }
 
 @media screen and (max-width: 470px) {
   .img-container {
     grid-template-columns: repeat(auto-fit, 330px);
+  }
+  .img-container a {
+    min-width: 330px;
   }
 }
 
@@ -87,10 +101,17 @@
   .img-container {
     grid-template-columns: repeat(auto-fit, 290px);
   }
+  .img-container a {
+    min-width: 290px;
+  }
 }
 
 @media screen and (max-width: 330px) {
   .img-container {
     grid-template-columns: repeat(auto-fit, 250px);
+  }
+
+  .img-container a {
+    min-width: 250px;
   }
 }
